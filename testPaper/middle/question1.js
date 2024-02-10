@@ -22,6 +22,12 @@
  * @return {string}
  */
 
-export const createUserActionString = (object) => {
+export const createUserActionString = ({ userName = "名無し", action = "何もしませんでした" }) => {
   //ここに記述
-};
+  return `${userName ? `${userName}さんが` : "名無しさんが"}${action ? `${action}しました` : "何もしませんでした"}`;
+}
+
+console.log(createUserActionString({ userName: "田中", action: "挨拶" }))
+console.log(createUserActionString({ userName: "山田", action: "洗濯" }))
+console.log(createUserActionString({userName:"",action: "勉強" }))
+console.log(createUserActionString({ userName: "佐藤",action:""}))
