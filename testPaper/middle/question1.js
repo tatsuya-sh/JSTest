@@ -22,7 +22,7 @@
  * @return {string}
  */
 
-export const createUserActionString = ({ userName = "名無し", action = "何もしませんでした" }) => {
+export const createUserActionString = ({userName, action}) => {
   //ここに記述
   return `${userName ? `${userName}さんが` : "名無しさんが"}${action ? `${action}しました` : "何もしませんでした"}`;
 }
