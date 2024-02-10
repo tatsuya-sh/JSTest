@@ -9,10 +9,13 @@
 // 5. checkboxのvalueのデフォルト値はfalseにしてください。
 // 6. styleの付け方はインラインスタイルを適応してください。
 
+import React, { useState } from "react";
 /**
  * @param {{userName:string}} props
  * @returns {ReactNode}
  */
-const TestComponent1 = ({ userName }) => {};
+const TestComponent1 = ({ userName }) => {
+  const [isUserCheck, setIsUserCheck] = useState(false);
+};
 
 export default TestComponent1;
