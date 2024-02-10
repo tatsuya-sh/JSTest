@@ -16,6 +16,22 @@ import React, { useState } from "react";
  */
 const TestComponent1 = ({ userName }) => {
   const [isUserCheck, setIsUserCheck] = useState(false);
+
+  return (
+    <li>
+      <input
+        type="checkbox"
+        checked={isUserCheck}
+        onChange={() => {
+          setIsUserCheck(!isUserCheck);
+        }}
+      />
+
+      <span style={{ textDecoration: isUserCheck ? "line-through" : "none" }}>
+        {userName}
+      </span>
+    </li>
+  );
 };
 
 export default TestComponent1;

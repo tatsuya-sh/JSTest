@@ -15,7 +15,14 @@ import TestComponent1 from "./question6";
  * @returns {ReactNode}
  */
 const TestComponent2 = ({ userNames }) => {
-  return <ul></ul>;
+  return (
+    <ul>
+      {userNames.map(
+        (name, index) =>
+          name !== "自分" && <TestComponent1 key={index} userName={name} />,
+      )}
+    </ul>
+  );
 };
 
 export default TestComponent2;
